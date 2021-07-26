@@ -101,20 +101,20 @@ function searchDataValue(data, target, condition = (elem => elem === target), co
 // Testing Recursion Traversal
 // search by key
 const target_id = searchDataKey(company, 'id')
-		console.log(target_id);
+		// console.log(target_id);
 
 const target_sales = searchDataKey(company, 'sales')
-		console.log(target_sales)
+		// console.log(target_sales)
 
 const staff = searchDataKey(company, 'name');
-		console.log(staff);
+		// console.log(staff);
 
 // search by value
 const budget = searchDataValue(company, 'salary', (value)=> value > 900000, )
-		console.log(budget)
+		// console.log(budget)
 
 const names = searchDataValue(company, 'name', (value)=>{ if(typeof(value) === 'string') return value.includes('O')});
-		console.log(names);
+		// console.log(names);
 
 
 
@@ -159,3 +159,9 @@ function isEmpty(elem){
 }
 
 
+
+
+
+const json_string ="{\"23 May 2021, Sunday,\": {\"каб. 100\": [{\"time\": \"11 - 17\", \"group\": \"2\"}], \"каб. 200\": [{\"time\": \"12 - 15\", \"group\": \"2\"}], \"каб.300\": [{\"time\": \"10 - 13\", \"group\": \"4\"}]}, \"24 May 2021, Monday,\": {\"каб. 100\": [{\"time\": \"11 - 17\", \"group\": \"2\"}], \"каб. 200\": [{\"time\": \"12 - 15\", \"group\": \"2\"}], \"каб.300\": [{\"time\": \"10 - 13\", \"group\": \"4\"}]}}"
+const json = JSON.parse(json_string);
+console.log(json)
